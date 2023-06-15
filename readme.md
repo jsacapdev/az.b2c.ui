@@ -51,4 +51,4 @@ Finally, the application configuration looks something like this:
   },
 ```
 
-In summary, leverage the policies of the ASP.NET Core middleware to for native B2C integration.
+In summary, the application leverages the policies of the ASP.NET Core middleware to achieve native B2C integration.
