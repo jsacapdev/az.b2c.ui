@@ -7,33 +7,9 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/azb2c.ui/azb2c.ui.csproj",
+                "${workspaceFolder}/az.b2c.ui.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "publish",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "publish",
-                "${workspaceFolder}/src/azb2c.ui/azb2c.ui.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "watch",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "watch",
-                "run",
-                "--project",
-                "${workspaceFolder}/src/azb2c.ui/azb2c.ui.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

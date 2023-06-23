@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@if (HttpContextAccessor.HttpContext.User.Identity.IsAuthenticated!)
+{
+    <div class="text-center">
+    <h1 class="display-4">Your Claims:</h1>
+    <div class="text-left">
+        @foreach (var claim in Model.Claims)
+            {
+                <div><b>@claim.Type</b> @claim.Value</div>
+            }
+        </div>
+    </div>
+}
