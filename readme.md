@@ -94,3 +94,27 @@ And uses the following configuration:
     "ServiceId": "df89ea63-d5ba-4faa-92b6-ed563e901360"
   },
 ```
+
+## Deployment to Azure
+
+``` bash
+
+az group create -n rg-susi-dev-001 -l uksouth 
+
+az deployment group create -f ./main.bicep \
+-g rg-susi-dev-001 \
+--parameters environment=dev \
+location=uksouth \
+--debug
+
+dotnet publish -c release -o /path/to/azb2c.ui.deploy/
+
+zip -r api.zip .
+
+az webapp deployment source config-zip -g rg-susi-dev-001 -n web-susi-dev-001 --src /path/to/azb2c.ui.deploy/api.zip --debug
+
+```
+
+And then run:
+
+`https://web-susi-dev-001.azurewebsites.net/`

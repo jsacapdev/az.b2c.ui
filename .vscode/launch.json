@@ -15,7 +15,14 @@
             "cwd": "${workspaceFolder}/src/azb2c.ui",
             "stopAtEntry": false,
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "AzureAdB2C__Instance": "???",
+                "AzureAdB2C__ClientId": "???",
+                "AzureAdB2C__TenantId": "???",
+                "AzureAdB2C__Domain": "???",
+                "AzureAdB2C__CallbackPath": "/signin-oidc",
+                "AzureAdB2C__SignedOutCallbackPath": "/signout-callback-oidc",
+                "AzureAdB2C__SignUpSignInPolicyId": "B2C_1_susi2"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
